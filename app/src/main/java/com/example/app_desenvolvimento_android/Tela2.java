@@ -11,6 +11,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Tela2 extends AppCompatActivity {
     private TextView textView;
@@ -25,6 +26,7 @@ public class Tela2 extends AppCompatActivity {
     private void getUsuarios(){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://jsonplaceholder.typicode.com/")
+                .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
         JsonPlaceHolder JsonPH = retrofit.create(JsonPlaceHolder.class);
