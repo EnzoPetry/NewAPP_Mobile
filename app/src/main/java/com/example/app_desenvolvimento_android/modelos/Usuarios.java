@@ -1,4 +1,4 @@
-package com.example.app_desenvolvimento_android;
+package com.example.app_desenvolvimento_android.modelos;
 
 public class Usuarios {
     private int id;

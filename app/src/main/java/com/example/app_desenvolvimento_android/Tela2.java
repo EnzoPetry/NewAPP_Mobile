@@ -8,13 +8,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.app_desenvolvimento_android.modelos.Usuarios;
+
 import java.util.List;
 
 import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Tela2 extends AppCompatActivity {
     private TextView textView;
@@ -39,14 +37,11 @@ public class Tela2 extends AppCompatActivity {
         });
     }
     private void getUsuarios() {
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://jsonplaceholder.typicode.com/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
 
-        JsonPlaceHolder JsonPH = retrofit.create(JsonPlaceHolder.class);
+
+        Chamadas JsonPH = retrofit.create(Chamadas.class);
         Call<List<Usuarios>> call = JsonPH.getUsuarios();
-        call.enqueue(new Callback<List<Usuarios>>() {
+        call.enqueue(new () {
             @Override
             public void onResponse(Call<List<Usuarios>> call, Response<List<Usuarios>> response) {
                 if (!response.isSuccessful()) {
