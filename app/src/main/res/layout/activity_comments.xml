@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".Tela2">
+    tools:context=".ActUsers">
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
@@ -43,7 +43,7 @@
         app:layout_constraintVertical_bias="0.023" />
 
     <EditText
-        android:id="@+id/idUsuario"
+        android:id="@+id/idComentarios"
         android:layout_width="180dp"
         android:layout_height="39dp"
         android:layout_marginTop="16dp"

@@ -2,30 +2,27 @@ package com.example.app_desenvolvimento_android.modelos;
 
 public class Todos {
     private int userId;
-    private int id;
+    private String id;
     private String title;
 
     public int getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
 
-    public int getId() {
+    public String getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+
+    @Override
+    public String toString() {
+        return "ID: " + id + "\n" +
+                "Identificação do Usuário: " + userId + "\n" +
+                "Titulo: " + title + "\n\n";
     }
 }

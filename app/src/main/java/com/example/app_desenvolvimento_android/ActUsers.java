@@ -17,7 +17,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Tela2 extends AppCompatActivity {
+public class ActUsers extends AppCompatActivity {
     private TextView textView;
     private EditText idUsuario;
 
@@ -62,7 +62,7 @@ public class Tela2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tela2);
+        setContentView(R.layout.activity_users);
 
         textView = findViewById(R.id.textView);
         idUsuario = findViewById(R.id.idUsuario);

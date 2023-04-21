@@ -2,7 +2,7 @@ package com.example.app_desenvolvimento_android.modelos;
 
 public class Comentarios {
     private int postId;
-    private int id;
+    private String id;
     private String name;
     private String email;
     private String body;
@@ -11,39 +11,32 @@ public class Comentarios {
         return postId;
     }
 
-    public void setPostId(int postId) {
-        this.postId = postId;
-    }
-
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     public String getBody() {
         return body;
     }
 
-    public void setBody(String body) {
-        this.body = body;
+
+    @Override
+    public String toString() {
+        return "ID: " + id + "\n" +
+                "Identificação do Post: " + postId + "\n" +
+                "Nome: " + name + "\n" +
+                "E-mail: " + email + "\n" +
+                "Corpo: " + body + "\n\n";
     }
 }

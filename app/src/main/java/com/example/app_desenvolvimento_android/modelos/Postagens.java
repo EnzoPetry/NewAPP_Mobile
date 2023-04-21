@@ -2,7 +2,7 @@ package com.example.app_desenvolvimento_android.modelos;
 
 public class Postagens {
     private int userId;
-    private int id;
+    private String id;
     private String title;
     private String body;
 
@@ -10,31 +10,26 @@ public class Postagens {
         return userId;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
 
     public String getBody() {
         return body;
     }
 
-    public void setBody(String body) {
-        this.body = body;
+
+    @Override
+    public String toString() {
+        return "ID: " + id + "\n" +
+                "Identificação do Usuário: " + userId + "\n" +
+                "Titulo: " + title + "\n" +
+                "Corpo: " + body + "\n\n";
     }
 }

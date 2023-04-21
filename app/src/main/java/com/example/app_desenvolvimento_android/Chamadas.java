@@ -15,19 +15,28 @@ import retrofit2.http.Path;
 
 public interface Chamadas {
 
-    @GET("posts/{id}")
-    Call<Postagens> getPostagensById(@Path("id") int id);
+    @GET("posts")
+    Call<List<Postagens>> getPostagens();
 
-    @GET("comments/{id}")
-    Call<Comentarios> getComentariosById(@Path("id") int id);
+    @GET("comments")
+    Call<List<Comentarios>> getComentarios();
 
     @GET("users")
     Call<List<Usuarios>> getUsuarios();
+
+    @GET("todos")
+    Call<List<Todos>> getTodos();
+
+    @GET("posts/{id}")
+    Call<Postagens> getPostagensById(@Path("id") String id);
+
+    @GET("comments/{id}")
+    Call<Comentarios> getComentariosById(@Path("id") String id);
 
     @GET("users/{id}")
     Call<Usuarios> getUsuarioById(@Path("id") String id);
 
     @GET("todos/{id}")
-    Call<Todos> getTodosById(@Path("id") int id);
+    Call<Todos> getTodosById(@Path("id") String id);
 }
 

@@ -23,13 +23,33 @@ public class API {
         chamadas = retrofit.create(Chamadas.class);
     }
 
-    public void getPostagensById(int id, Callback<Postagens> callback) {
+    public void getPostagensById(String id, Callback<Postagens> callback) {
         Call<Postagens> call = chamadas.getPostagensById(id);
         call.enqueue(callback);
 
     }
-    public void getComentariosById(int id, Callback<Comentarios> callback) {
+    public void getComentariosById(String id, Callback<Comentarios> callback) {
         Call<Comentarios> call = chamadas.getComentariosById(id);
+        call.enqueue(callback);
+
+    }
+
+    public void getUsuarioById(String id, Callback<Usuarios> callback) {
+        Call<Usuarios> call = chamadas.getUsuarioById(id);
+        call.enqueue(callback);
+    }
+    public void getTodosById(String id,Callback<Todos>callback) {
+        Call<Todos> call = chamadas.getTodosById(id);
+        call.enqueue(callback);
+    }
+
+    public void getPostagens(Callback<List<Postagens>> callback) {
+        Call<List<Postagens>> call = chamadas.getPostagens();
+        call.enqueue(callback);
+
+    }
+    public void getComentarios(Callback<List<Comentarios>> callback) {
+        Call<List<Comentarios>> call = chamadas.getComentarios();
         call.enqueue(callback);
 
     }
@@ -38,12 +58,8 @@ public class API {
         call.enqueue(callback);
     }
 
-    public void getUsuarioById(String id, Callback<Usuarios> callback) {
-        Call<Usuarios> call = chamadas.getUsuarioById(id);
-        call.enqueue(callback);
-    }
-    public void getTodosById(int id,Callback<Todos>callback) {
-        Call<Todos> call = chamadas.getTodosById(id);
+    public void getTodos(Callback<List<Todos>> callback) {
+        Call<List<Todos>> call = chamadas.getTodos();
         call.enqueue(callback);
     }
 }
