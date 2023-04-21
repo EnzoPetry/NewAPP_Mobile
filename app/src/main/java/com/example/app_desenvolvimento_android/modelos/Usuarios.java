@@ -1,11 +1,11 @@
 package com.example.app_desenvolvimento_android.modelos;
 
 public class Usuarios {
-    private int id;
+    private String id;
     private String name;
     private String email;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
     public String getNome() {

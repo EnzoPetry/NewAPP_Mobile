@@ -7,6 +7,7 @@ import com.example.app_desenvolvimento_android.modelos.Usuarios;
 
 import java.util.List;
 
+import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -23,21 +24,27 @@ public class API {
     }
 
     public void getPostagensById(int id, Callback<Postagens> callback) {
-        chamadas.getPostagensById(id).enqueue(callback);
+        Call<Postagens> call = chamadas.getPostagensById(id);
+        call.enqueue(callback);
+
     }
     public void getComentariosById(int id, Callback<Comentarios> callback) {
-        chamadas.getComentariosById(id).enqueue(callback);
+        Call<Comentarios> call = chamadas.getComentariosById(id);
+        call.enqueue(callback);
 
     }
     public void getUsuarios(Callback<List<Usuarios>> callback) {
-        chamadas.getUsuarios().enqueue(callback);
+        Call<List<Usuarios>> call = chamadas.getUsuarios();
+        call.enqueue(callback);
     }
 
-    public void getUsuarioById(int id, Callback<Usuarios> callback) {
-        chamadas.getUsuarioById(id).enqueue(callback);
+    public void getUsuarioById(String id, Callback<Usuarios> callback) {
+        Call<Usuarios> call = chamadas.getUsuarioById(id);
+        call.enqueue(callback);
     }
     public void getTodosById(int id,Callback<Todos>callback) {
-        chamadas.getTodosById(id).enqueue(callback);
+        Call<Todos> call = chamadas.getTodosById(id);
+        call.enqueue(callback);
     }
 }
 
